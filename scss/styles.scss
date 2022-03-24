@@ -1,0 +1,64 @@
+@import "colors"; // colors variables
+@import "typography";
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    @media (max-width: 1000px) {
+      font-size: calc(12px + 0.4vw);
+    }
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body,
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+main {
+    display: grid;
+    grid-template-areas: 
+    "header header header logo1 logo2"
+    "header header header logo3 logo4"
+    "info info form form form";
+    grid-template-rows: 200px 200px 150px;
+    gap: 5px;
+
+    @media (max-width: 570px) {
+        grid-template-areas: 
+            "header header"
+            "header header"
+            "logo1 logo2"
+            "logo3 logo4"
+            "info info"
+            "form form";
+        grid-template-rows: repeat(6, 100px);
+    }
+}
+
+header {
+    grid-area: header;
+    background-color: $yellow;
+};
+.logo {
+    background-color: $blue;
+};
+.dak {grid-area: logo1};
+.ruwbouw {grid-area: logo2};
+.riool {grid-area: logo3};
+.grond {grid-area: logo4};
+aside {
+    grid-area: info; 
+    background-color: $blue;};
+section {
+    grid-area: form
+};

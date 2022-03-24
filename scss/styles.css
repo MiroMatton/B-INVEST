@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+a,
+a:visited,
+a:active a:link {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: calc(12px + 0.4vw);
+  }
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header header logo1 logo2" "header header header logo3 logo4" "info info form form form";
+  -ms-grid-rows: 200px 200px 150px;
+      grid-template-rows: 200px 200px 150px;
+  gap: 5px;
+}
+
+@media (max-width: 570px) {
+  main {
+        grid-template-areas: "header header" "header header" "logo1 logo2" "logo3 logo4" "info info" "form form";
+    -ms-grid-rows: (100px)[6];
+        grid-template-rows: repeat(6, 100px);
+  }
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  background-color: #F1C631;
+}
+
+.logo {
+  background-color: #00374E;
+}
+
+.dak {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: logo1;
+}
+
+.ruwbouw {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: logo2;
+}
+
+.riool {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: logo3;
+}
+
+.grond {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+  grid-area: logo4;
+}
+
+aside {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: info;
+  background-color: #00374E;
+}
+
+section {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: form;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,21 @@
+@import "colors";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+a,
+a:visited,
+a:active a:link {
+  text-decoration: none;
+}
