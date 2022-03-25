@@ -125,6 +125,11 @@ aside {
     color: white;
     margin-bottom: 0.5rem;
   }
+
+  @media (max-width: $mobile) {
+    text-align: center;
+    padding: 0 0 1rem 0;
+  }
 }
 
 section {
@@ -133,6 +138,9 @@ section {
 
   h2 {
     color: $blue;
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
   }
 
   form {
@@ -148,6 +156,16 @@ section {
       #email {
         width: 60%;
         margin-left: 2rem;
+      }
+
+      @media (max-width: $mobile) {
+        flex-direction: column;
+
+        #name,
+        #email {
+          width: 100%;
+          margin-left: 0;
+        }
       }
     }
 
@@ -176,6 +194,11 @@ section {
       margin: 1.5rem 0;
       font-size: 1rem;
       font-weight: 600;
+
+      &:hover {
+        background-color: $yellow;
+        color: $blue;
+      }
     }
   }
 }

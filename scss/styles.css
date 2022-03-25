@@ -21,6 +21,12 @@ h2 {
   font-weight: 700;
 }
 
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
 a,
 a:visited,
 a:active a:link {
@@ -185,6 +191,13 @@ aside a {
   margin-bottom: 0.5rem;
 }
 
+@media (max-width: 600px) {
+  aside {
+    text-align: center;
+    padding: 0 0 1rem 0;
+  }
+}
+
 section {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
@@ -195,6 +208,12 @@ section {
 
 section h2 {
   color: #00374e;
+}
+
+@media (max-width: 600px) {
+  section h2 {
+    text-align: center;
+  }
 }
 
 section form {
@@ -214,6 +233,20 @@ section form #userGegevens #name {
 section form #userGegevens #email {
   width: 60%;
   margin-left: 2rem;
+}
+
+@media (max-width: 600px) {
+  section form #userGegevens {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section form #userGegevens #name,
+  section form #userGegevens #email {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 section form input,
@@ -257,5 +290,10 @@ section form .submit {
   margin: 1.5rem 0;
   font-size: 1rem;
   font-weight: 600;
+}
+
+section form .submit:hover {
+  background-color: #f1c631;
+  color: #00374e;
 }
 /*# sourceMappingURL=styles.css.map */
