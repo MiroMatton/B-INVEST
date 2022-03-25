@@ -1,17 +1,23 @@
 @import "colors";
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.25rem;
+  color: $blue;
+  font-weight: 900;
+  width: 80%;
+  @media (max-width: $mobile) {
+    font-size: 2rem;
+    width: 95%;
+  }
 }
 
 h2 {
   font-size: 2.5rem;
+  font-weight: 700;
 }
 
 a,
