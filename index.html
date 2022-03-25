@@ -1,21 +1,61 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/styles.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <header>B-INVEST</header>
-        <div class="logo grond"> test</div>
-        <div class="logo riool">test</div>
-        <div class="logo dak">test</div>
-        <div class="logo ruwbouw">stes</div>
-        <aside>test</aside>
-        <section>test</section>
+      <header>
+        <img src="./img/B_INVESTGROUP.svg" alt="B_INVESTGROUP" />
+        <h1>algemene grond- en ruwbouwwerken</h1>
+      </header>
+      <div class="logo grond"><img src="./img/grond.svg" alt="grond" /></div>
+      <div class="logo riool"><img src="./img/riool.svg" alt="riool" /></div>
+      <div class="logo dak"><img src="./img/dak.svg" alt="dak" /></div>
+      <div class="logo ruwbouw">
+        <img src="./img/ruwbouw.svg" alt="ruwbouw" />
+      </div>
+      <aside>
+        <h2>contacteer ons</h2>
+        <a href="tel:+32 496 57 80 15">+32 478011111</a>
+        <a href="mailto: info@b-investgroup.be">info@b-investgroup.be</a>
+      </aside>
+      <section>
+        <h2>stuur een bericht</h2>
+        <form
+          action="https://formsubmit.co/janbracke@sealeaf.biz"
+          method="POST"
+        >
+          <div id="userGegevens">
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="naam"
+              required
+            />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="E-mail"
+              required
+            />
+          </div>
+          <textarea
+            placeholder="message"
+            name="msg"
+            id="msg"
+            rows="1s"
+            required
+          ></textarea>
+          <button class="submit" type="submit">VERSTUUR</button>
+        </form>
+      </section>
     </main>
-</body>
-</html>      
+  </body>
+</html>
