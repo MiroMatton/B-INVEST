@@ -4,10 +4,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1 {
-  font-size: 3.25rem;
+h1,
+li {
+  font-size: 2.5rem;
   color: $blue;
-  font-weight: 900;
+  font-weight: 800;
   width: 80%;
 
   @media (max-width: $mobile) {
@@ -17,7 +18,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
 
   @media (max-width: $mobile) {

@@ -2,22 +2,24 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1 {
-  font-size: 3.25rem;
+h1,
+li {
+  font-size: 2.5rem;
   color: #00374e;
-  font-weight: 900;
+  font-weight: 800;
   width: 80%;
 }
 
 @media (max-width: 600px) {
-  h1 {
+  h1,
+  li {
     font-size: 2rem;
     width: 95%;
   }
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -61,22 +63,38 @@ p {
   padding: 0;
 }
 
+li {
+  list-style-type: none;
+  position: relative;
+  /* It's needed for setting position to absolute in the next rule. */
+}
+
+li::before {
+  content: ">";
+  position: absolute;
+  left: -0.8em;
+  top: 0.3em;
+  /* Adjust this value so that it appears where you want. */
+  font-size: 2rem;
+  /* Adjust this value so that it appears what size you want. */
+}
+
 main {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "header header logo1 logo2" "header header logo3 logo4" "info form form form";
+      grid-template-areas: "header header logo1 logo2" "header header logo3 logo4" "header header logo5 logo6" "info form form form";
   gap: 5px;
 }
 
 @media (max-width: 600px) {
   main {
-        grid-template-areas: "header header" "header header" "logo1 logo2" "logo3 logo4" "info info" "form form";
+        grid-template-areas: "header header" "header header" "logo1 logo2" "logo3 logo4" "logo5 logo6" "info info" "form form";
   }
 }
 
 header {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: header;
@@ -90,7 +108,7 @@ header img {
 }
 
 header h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 600px) {
@@ -165,13 +183,27 @@ header h1 {
   grid-area: logo4;
 }
 
+.luxewagens {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: logo5;
+  background-color: #f1c631;
+}
+
+.bestelwagens {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: logo6;
+  background-color: #f1c631;
+}
+
 aside h2,
 section h2 {
   margin: 1rem 0;
 }
 
 aside {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: info;
   background-color: #00374e;
@@ -199,7 +231,7 @@ aside a {
 }
 
 section {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-area: form;

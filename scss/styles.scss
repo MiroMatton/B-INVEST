@@ -26,6 +26,18 @@ p {
   padding: 0;
 }
 
+li {
+  list-style-type: none;
+  position: relative; /* It's needed for setting position to absolute in the next rule. */
+}
+
+li::before {
+  content: ">";
+  position: absolute;
+  left: -0.8em;
+  top: 0.3em; /* Adjust this value so that it appears where you want. */
+  font-size: 2rem; /* Adjust this value so that it appears what size you want. */
+}
 // grid
 
 main {
@@ -33,6 +45,7 @@ main {
   grid-template-areas:
     "header header logo1 logo2"
     "header header logo3 logo4"
+    "header header logo5 logo6"
     "info form form form";
   gap: 5px;
 
@@ -42,6 +55,7 @@ main {
       "header header"
       "logo1 logo2"
       "logo3 logo4"
+      "logo5 logo6"
       "info info"
       "form form";
   }
@@ -60,7 +74,7 @@ header {
   }
 
   h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   @media (max-width: $mobile) {
@@ -104,6 +118,14 @@ header {
 }
 .ruwbouw {
   grid-area: logo4;
+}
+.luxewagens {
+  grid-area: logo5;
+  background-color: $yellow;
+}
+.bestelwagens {
+  grid-area: logo6;
+  background-color: $yellow;
 }
 
 // contact form
